@@ -55,6 +55,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable-tree": "^0.7.0",
+    "react-fontpicker-ts": "^0.2.1",
     "react-merge-refs": "^2.0.1",
     "react-sortablejs": "^6.1.4",
     "scroll-into-view-if-needed": "^3.0.10",

@@ -22,6 +22,7 @@ import { InspectorTargetContext } from "../components/InspectorTargetContext";
 import { projectState } from "../../../state/ProjectState";
 import { InspectorComboBox } from "./inputs/InspectorComboBox";
 import googleFonts from "@uimix/foundation/src/fonts/GoogleFonts.json";
+import { InspectorFontPicker } from "./inputs/InspectorFontPicker";
 
 const googleFontOptions = googleFonts.items.map((item) => ({
   value: item.family,
@@ -79,7 +80,15 @@ export const TextPane: React.FC = observer(function TextPane() {
       />
       <InspectorTargetContext.Provider value={textSelectables}>
         <div className="flex flex-col gap-2">
+          {/* 
           <InspectorComboBox
+            get={(s) => s.style.fontFamily}
+            set={(s, value) => {
+              s.style.fontFamily = value ?? "Inter";
+            }}
+            options={googleFontOptions}
+          /> */}
+          <InspectorFontPicker
             get={(s) => s.style.fontFamily}
             set={(s, value) => {
               s.style.fontFamily = value ?? "Inter";
